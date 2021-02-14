@@ -9,10 +9,10 @@ define(function (module) {
             'plugin:prettier/recommended',
         ],
         parserOptions: {
-            ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-            sourceType: 'module', // Allows for the use of imports
+            ecmaVersion: 2018,
+            sourceType: 'module',
             ecmaFeatures: {
-                jsx: true, // Allows for the parsing of JSX
+                jsx: true,
             },
         },
         rules: {
@@ -20,7 +20,7 @@ define(function (module) {
         },
         settings: {
             react: {
-                version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+                version: 'detect',
             },
         },
         plugins: ['react', '@typescript-eslint', 'prettier'],
