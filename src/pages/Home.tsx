@@ -1,9 +1,12 @@
 import React from 'react';
+import Login from '../components/Login';
 
 export const Home: React.FC = () => {
     return (
         <>
-            <h1>I am the Login Page</h1>
+            {/* <NavBar/> */}
+            <Login />
+            {/* <Footer/> */}
         </>
     );
 };
