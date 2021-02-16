@@ -23,7 +23,7 @@ define(function (module) {
                 version: 'detect',
             },
         },
-        plugins: ['react', '@typescript-eslint', 'prettier'],
+        plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks'],
         env: {
             browser: true,
             jest: true,
