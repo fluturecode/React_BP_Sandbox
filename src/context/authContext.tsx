@@ -1,43 +1,9 @@
-import createDataContext from './indexContext';
+import { createContext, useContext, useReducer } from 'react';
 
-const LOGIN_USER = 'LOGIN_USER';
-const LOGOUT = 'LOGOUT';
-const SET_USER = 'SET_USER';
-const SET_USER_TYPE = 'SET_USER_TYPE';
+export const AuthContext = createContext();
 
-const initialState = {
-    user: {},
-    token: null,
-    userType: null,
-};
-
-const authReducer = (state, action) => {
-    switch (action.type) {
-        case LOGIN_USER:
-            return { ...state, user: action.user, token: action.token };
-        case LOGOUT:
-            return { ...initialState };
-        case SET_USER:
-            return { ...state, user: action.user };
-        case SET_USER_TYPE:
-            return { ...state, userType: action.userType };
-        default:
-            return state;
-    }
-};
-
-const setUser = dispatch => user {
-    
-}
-
-export const { Context, Provider } = createDataContext(
-    authReducer,
-    {
-        setUser,
-        userLogout,
-        setToken,
-        setUserType,
-        loginUser,
-    },
-    initialState,
+export const AuthProvider = ({ reducer, initialState, children }) => (
+    <AuthContext.Provider value={useReducer(reducer, initialState)}>{children}</AuthContext.Provider>
 );
+
+export const useAuthValue = () => useContext(AuthContext);
