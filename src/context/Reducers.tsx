@@ -1,10 +1,4 @@
-export const initialState = {
-    isAuthenticated: false,
-    user: null,
-    token: null,
-};
-
-const reducer = (state, action) => {
+export const userReducer = (state: any, action: any) => {
     switch (action.type) {
         case 'LOGIN':
             return {
@@ -16,5 +10,3 @@ const reducer = (state, action) => {
             return state;
     }
 };
-
-export default reducer;
