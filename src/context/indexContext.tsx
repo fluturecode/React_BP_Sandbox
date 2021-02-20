@@ -6,11 +6,15 @@ import React from 'react';
 //     initalState: any,
 // ) => {
 
-interface AppContextInterface {
+interface IContext {
     children: any;
 }
 
-const Context = React.createContext<AppContextInterface | null>(null);
+interface Props {
+    context: IContext;
+}
+
+const Context = React.createContext<Props | null>(null);
 
 const Provider: React.FC = ({ children }) => {
     const [state, dispatch] = React.useReducer(reducer, initalState);
