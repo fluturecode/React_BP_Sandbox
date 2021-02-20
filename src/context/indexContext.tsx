@@ -1,15 +1,15 @@
-import React, { createContext, useReducer } from 'react';
+import React from 'react';
 
 const createDataContext: (
     reducer: any,
     actions: any,
     initalState: any,
 ) => {
-  
-  const Context = createContext();
 
-  const Provider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initalState);
+  const Context = React.createContext(null);
+
+  const Provider: React.FC = ({ children }) => {
+    const [state, dispatch] = React.useReducer(reducer, initalState);
 
     const boundActions = {};
     for (let key in actions) {
