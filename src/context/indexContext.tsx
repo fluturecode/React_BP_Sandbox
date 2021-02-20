@@ -6,7 +6,10 @@ const createDataContext: (
     initalState: any,
 ) => {
 
-  const Context = React.createContext(null);
+  interface AppContextInterface {
+  }
+  
+  const Context = React.createContext<AppContextInterface | null>(null);
 
   const Provider: React.FC = ({ children }) => {
     const [state, dispatch] = React.useReducer(reducer, initalState);
