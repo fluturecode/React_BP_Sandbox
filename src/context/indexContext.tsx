@@ -1,11 +1,5 @@
 import React from 'react';
 
-// const createDataContext: (
-//     reducer: any,
-//     actions: any,
-//     initalState: any,
-// ) => {
-
 interface IContext {
     children: any;
 }
@@ -13,6 +7,12 @@ interface IContext {
 interface Props {
     context: IContext;
 }
+
+const createDataContext: (
+    reducer: any,
+    actions: any,
+    initalState: any,
+) = (reducer, actions, initalState) => {
 
 const Context = React.createContext<Props | null>(null);
 
@@ -27,5 +27,6 @@ const Provider: React.FC = ({ children }) => {
 };
 
 return { Context, Provider };
+}
 
-// export default createDataContext;
+export default createDataContext;
