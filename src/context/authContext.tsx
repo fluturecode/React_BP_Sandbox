@@ -10,11 +10,3 @@ export const userReducer = (state: any, action: any) => {
             return state;
     }
 };
-//
-// type User = {
-//     id: number;
-//     firstName: string;
-//     lastName: string;
-//     email: string;
-//     password: string;
-// };
