@@ -28,7 +28,6 @@
       env: {
         browser: true,
         jest: true,
-        amd: true,
       },
       overrides: [
         {
